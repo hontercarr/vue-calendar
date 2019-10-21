@@ -10,13 +10,13 @@ Vue.use(VueTextareaAutosize);
 Vue.config.productionTip = false;
 
 firebase.initializeApp({
-    apiKey: "AIzaSyA4VJdj8Sl3Y8e8LqQnChcKOmJXTptGn_8",
-    authDomain: "vue-calendar-595c3.firebaseapp.com",
-    databaseURL: "https://vue-calendar-595c3.firebaseio.com",
-    projectId: "vue-calendar-595c3",
-    storageBucket: "vue-calendar-595c3.appspot.com",
-    messagingSenderId: "98412903040",
-    appId: "1:98412903040:web:244efac301ad40f02f8465"
+    apiKey: process.env.VUE_APP_API_KEY,
+    authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+    databaseURL: process.env.VUE_APP_DATABASE_URL,
+    projectId: process.env.VUE_APP_PROJECT_ID,
+    storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID,
+    appId: process.env.VUE_APP_APP_ID
 });
 
 export const db = firebase.firestore();
